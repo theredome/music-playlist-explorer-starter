@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Playlist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><h1>Music Player Explorer</h1></a>
+            <a href="featured.html"><h2>Featured Playlist</h2></a>
+        </nav>
+    </header>
+    <main>
+        <section class="page-title">
+            <h1>Featured Playlist</h1>
+        </section>
+        <section class="playlist-cards featured-playlist-cards">
+            <div class="modal-content" id="featured-modal">
+                <div class="modal-header">
+                    <img class="playlistImg" id="featured-img" src="assets/img/playlist.png" alt="playlist Image">
+                    <div class="modal-header-description">
+                        <h1 class="playlistName" id="featured-name" style="font-size: 4.5rem;"></h1>
+                        <h3 class="playlistCreator" id="featured-creator"></h3>
+                    </div>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="data/data.js"></script>
+    <script src="featured.js"></script>
+</body>
+</html>

@@ -1,6 +1,370 @@
+:root{
+    --background-base:  #121212;
+    --background-highlight: #1a1a1a;
+    --background-press: #000;
+    --background-elevated-base: #242424;
+    --background-elevated-highlight: #2a2a2a;
+    --background-elevated-press: #000;
+    --background-tinted-base: hsla(0,0%,100%,.07);
+    --background-tinted-highlight: hsla(0,0%,100%,.1);
+    --background-tinted-press: hsla(0,0%,100%,.04);
+    --text-base: #fff;
+    --text-subdued: #a7a7a7;
+    --text-bright-accent: #1ed760;
+    --text-negative: #f15e6c;
+    --text-warning: #ffa42b;
+    --text-positive: #1ed760;
+    --text-announcement: #3d91f4;
+    --essential-base: #fff;
+    --essential-subdued: #727272;
+    --essential-bright-accent: #1ed760;
+    --essential-negative: #e91429;
+    --essential-warning: #ffa42b;
+    --essential-positive: #1ed760;
+    --essential-announcement: #0d72ea;
+    --decorative-base: #fff;
+    --decorative-subdued: #292929;
+}
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: CircularSpTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #000000;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
 }
+
+header{
+    display: flex;
+    min-height: 50px;
+    background-color: var(--background-base);
+    margin: 15px 15px 0px 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+header h2{
+    text-align: right;
+    margin-right: 20px;
+}
+
+h1, h2, h3{
+    color: var(--text-base);
+}
+
+p{
+    color: var(--text-subdued);
+}
+
+header h1{
+    margin-left: 30px;
+    color: var(--text-base);
+    width: 82vw;
+}
+
+section{
+    background-color: var(--background-elevated-base);
+    
+    
+}
+
+.page-title{
+    margin: 0px 15px;
+    align-items: center;
+}
+
+.page-title h1{
+    margin: 0px;
+    padding: 30px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.playlist-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+    margin: 0px 15px;
+}
+
+.playlist-card:hover{
+    cursor: pointer;
+    background-color: var(--background-elevated-highlight);
+    transform: translateY(-10px)
+}
+
+.playlist-card:active{
+    background-color: var(--background-elevated-press);
+}
+
+.playlist-card {
+    background-color: transparent;
+    
+    border-radius: 8px;
+    padding: 20px;
+    width: auto;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s;
+}
+
+.fa-regular .fa-heart{
+    color: var(--decorative-subdued);
+}
+
+.fa-regular .fa-heart:hover{
+    color: var(--decorative-base);
+}
+
+.playlist-card img{
+    width: 23vw;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer{
+    background-color: var(--background-elevated-base);
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    border-block-start: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin: 0px 15px 15px 15px;
+    border-radius: 0px 0px 10px 10px;
+    
+}
+
+/* CSS for Modal */
+
+
+ 
+ /* The Modal (background) */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 0.8s
+}
+
+#featured-modal{
+    margin: 0px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+
+.modal-header img {
+    width: 14vw;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.modal-header-description h1,
+.modal-header-description h2 {
+    margin: 0;
+}
+
+
+
+/* Modal Body */
+.modal-body {
+    margin-top: 20px;
+}
+
+.modal-song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.4s;
+    position: relative;
+}
+
+.modal-song:hover {
+    background-color: var(--background-elevated-highlight);
+    transform: translateX(-10px);
+}
+
+.modal-song-img img {
+    width: 3.5vw;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.modal-song-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.song-title,
+.song-artist {
+    margin: 0;
+}
+
+.song-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.song-artist {
+    font-size: 14px;
+    color: var(--text-subdued);
+    transition: color 0.3s;
+}
+
+.song-album {
+    text-align: left;
+    flex-grow: 1;
+    min-width: 150px;
+    margin-left: 27%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-album p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-subdued);
+}
+
+.modal-song-duration {
+    font-size: 14px;
+    color: var(--text-subdued);
+    margin-left: 20px;
+}
+
+.song-like {
+    
+    margin-right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-subdued);
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.modal-song:hover .song-like {
+    opacity: 1;
+}
+
+.modal-song:hover .song-artist {
+    color: var(--text-base);
+}
+
+.song-like.liked {
+    color: var(--essential-bright-accent);
+    opacity: 1;
+}
+
+.song-like:hover {
+    transform: scale(1.04);
+}
+
+
+.playlist-like{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-subdued); 
+    margin-left: 10px;
+  }
+  
+  .playlist-like:hover {
+    color: var(--text-based); 
+    transform: scale(1.04);
+  }
+
+  .playlist-like.liked{
+    color: var(--essential-bright-accent);
+  }
+
+  .shuffle-button {
+    background-color: transparent;
+    color: var(--essential-bright-accent);
+    border: 1px solid var(--essential-positive);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.shuffle-button:hover {
+    background-color: var(--essential-positive);
+    color: #000000;
+}
+
+  
+
+
+
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }

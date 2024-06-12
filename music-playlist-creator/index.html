@@ -6,20 +6,59 @@
     
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <!-- Your header content here -->
+        <nav>
+            <a href="index.html"><h1>Music Player Explorer</h1></a>
+            <a href="featured.html"><h2>Featured Playlist</h2></a>
+        </nav>
+        
     </header>
 
+    <!-- Modal Structure -->
+<div id="modal-playlist" class="modal-overlay">
+    <div class="modal-content">
+       <span class="close">&times;</span>
+       <div class="modal-header">
+        <img class="playlistImg" src="assets/img/playlist.png" alt="playlist Image">
+        <div class="modal-header-description">
+            <h1 class="playlistName" style="font-size: 4.5rem;">Playlist Name</h1>
+            <h3 class="playlistCreator">by Creator</h3>
+            <i class="fa-regular fa-heart playlist-like" id="playlist-like"></i>
+            <span id="playlist-like-count">0</span>
+            <button id="shuffle-button" class="shuffle-button">Shuffle</button>
+        </div>
+       </div>
+       <div class="modal-body">
+      
+       </div>
+    </div>
+ </div>
+
     <main> 
-        <!-- Your main content here -->
+        <section class="page-title">
+            <h1>Playlist Home</h1>
+        </section>
+        <section class="playlist-cards">
+            <!-- <div class="playlist-card">
+                <img src="assets/img/playlist.png" alt="song pic">
+
+                <h3>Playlist Title</h2>
+                <p>Creator Name</p>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+             -->
+            
+        </section>
     </main>
 
     <footer>
-        <!-- Your footer content here -->
+        
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
