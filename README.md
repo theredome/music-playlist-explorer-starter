@@ -6,7 +6,7 @@ Submitted by: **Christopher Adeniji**
 
 Estimated time spent: **11** hours spent in total
 
-Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Music Playlist Explorer Deployed Site](https://inquisitive-swan-b4accb.netlify.app)
 
 ### Application Features
 
