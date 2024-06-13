@@ -1,4 +1,4 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
+
 
 ## Unit Assignment: Music Playlist Explorer
 
@@ -44,17 +44,16 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
   - [ ] Add a delete button to each playlist tile.
   - [ ] When clicked, the playlist is removed from the display and data model.
 
-- [ ] **Search Functionality**
-  - [ ] Implement a search bar that allows users to filter playlists by name or creator.
+- [x] **Search Functionality**
+  - [x] Implement a search bar that allows users to filter playlists by name or creator.
 
 - [ ] **Sorting Options**
   - [ ] Implement a dropdown or button options that allow users to sort the playlist by name, number of likes, or date added.
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+[watch here](https://www.loom.com/share/1d25c4cad9c24beba7da744850b0b122?sid=2aff2e19-70f2-4358-8556-8135d28f0460)
 
 ### Reflection
 
@@ -68,7 +67,7 @@ I would have added an API so that the songs are actually playable. The website i
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-I think 
+I think all I wanted to achieve was done and I'm really happy with my website. I wouldn't really change it except adding the actual songs.
 
 ### Open-source libraries used
 
